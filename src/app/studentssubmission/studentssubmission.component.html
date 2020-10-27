@@ -1,0 +1,29 @@
+<!-- <app-nav-student></app-nav-student> -->
+<br>
+<br>
+<br>
+<div class="container-fluid" >
+<div class="row">
+  
+<div *ngFor= 'let i of studentVacancies'  [attr.id]="i.id">
+<div class="col-sm-3">
+  <div class="card" style="width: 18rem; ">
+    <div class="card-body" style="text-align: left;">
+
+        <h5 class="card-title">Name: {{i.student_name}}</h5>
+        <h5 class="card-title" >ID: {{i.student_id}}</h5>
+        <h6 class="card-text">Organization Name: {{i.organization_name}}</h6>
+        <h6 class="card-text">Job Title: {{i.job_title}}</h6>
+        <p class="card-text" style="color: red;">Status: <span style="color: black;">{{i.status}}</span></p>
+
+  <button type="submit"  class="btn btn-primary btn-lg btn-block" (click)="accept(i)">Accept</button>
+  <button type="submit"  class="btn btn-primary btn-lg btn-block" (click)="reject(i.student_id)">Reject</button>
+
+  </div>
+  </div>
+  </div>
+  <br>
+  
+  </div>
+  </div>
+  </div>

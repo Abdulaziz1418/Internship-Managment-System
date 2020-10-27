@@ -1,0 +1,17 @@
+
+  <form [formGroup]="newVacancyForm" (ngSubmit)="onSubmit()">
+
+  <div class="card" style="width: 40rem; margin-left: 9cm; margin-top: 2cm;">
+    <div class="card-header">
+        Elm Company
+      </div>
+    <div class="card-body">
+
+      <h5 class="card-title">Vacancy Title:  <input type="text" name="" id="" formControlName="job_title"></h5>
+     
+      <h5 class="card-text">Description:      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="job_description"></textarea>      </h5>
+  
+      <button  class="btn btn-primary">Post</button>
+    </div>
+    </div>
+    </form>

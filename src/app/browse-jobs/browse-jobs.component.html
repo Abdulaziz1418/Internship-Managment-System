@@ -1,0 +1,24 @@
+<!-- <app-nav-student></app-nav-student> -->
+<br>
+<br>
+<br>
+<div class="container-fluid" (ngSubmit)="showVacanciesResponse()">
+<div class="row">
+  
+<div *ngFor= 'let i of vacancies'  [attr.id]="i.id">
+<div class="col-sm-3">
+  <div class="card" style="width: 18rem; ">
+    <div class="card-body" style="text-align: center;">
+
+  <h5 class="card-title" >{{i.organization_name}}</h5>
+  <h6 class="card-text">{{i.job_title}}</h6>
+  <p class="card-text">{{i.job_description}}</p>
+  <a  class="btn btn-primary btn-lg btn-block"(click)="submitApplication(i)">Apply</a>
+  </div>
+  </div>
+  </div>
+  <br>
+  
+  </div>
+  </div>
+  </div>

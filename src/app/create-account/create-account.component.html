@@ -1,0 +1,154 @@
+<body style="background-image: url(/assets/img/KSUMUZ.jpg); height: 670px; -webkit-background-size: cover;
+-moz-background-size:  cover;
+-o-background-size: cover;
+background-size: cover; background-color: rgba(126, 123, 215, 0.2);">
+
+
+
+  <div id="background">
+    <br>
+    <br>
+    <br>
+    <select (change)="onChange($event)" class="custom-select" style="width: 27%; margin-left: 1cm;">
+        <option selected>Who you are?</option>
+        <option value="Student" >Student</option>
+        <option value="Supervisor">Supervisor</option>
+        <option value="Orgnization">Orgnization</option>
+      </select>
+
+<div *ngIf="Type == 'Student'">
+    
+    <form [formGroup]="newStudentForm" (ngSubmit)="onSubmit()">
+        
+      <br>
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="name" aria-describedby="emailHelp"
+          placeholder="Full Name">
+      </div>
+      <div class="form-group">
+        <input type="number" class="form-control" formControlName="id" aria-describedby="emailHelp"
+          placeholder="KSU ID">
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" formControlName="email" aria-describedby="emailHelp"
+          placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <input type="number" class="form-control" formControlName="gpa" min="0" step="0.01" max="5" aria-describedby="emailHelp"
+          placeholder="GPA">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" formControlName="password" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+      </div>
+      <div class="form-group">
+        <span style="color: white;">Here Upload Your CV</span>
+        <input id="cin" name="cin" type="file" (change)="fileChangeEvent($event)" formControlName="cv" placeholder="Upload a file..." multiple/> 
+        
+        <button type="button" class="btn btn-primary btn-s" (click)="upload()">
+            <i class="glyphicon glyphicon-open-file"></i>&nbsp;Upload
+        </button>      </div>
+        <div class="form-group">
+          <span style="color: white;">Here Upload Your Academic Record</span>
+          <input id="cin" name="cin" type="file" (change)="fileChangeEvent($event)" formControlName="academicRecord" placeholder="Upload a file..." multiple/> 
+          
+          <button type="button" class="btn btn-primary btn-s" (click)="upload()">
+              <i class="glyphicon glyphicon-open-file"></i>&nbsp;Upload
+          </button>      </div>
+      <button type="submit" class="btn btn-outline-primary btn-lg btn-block" [disabled]="!newStudentForm.valid">Create
+        Account</button>
+      </form>
+  </div>
+   
+
+      <div *ngIf="Type == 'Supervisor'"> 
+        <form [formGroup]="newSupervisorForm" (ngSubmit)="onSubmit()">
+           
+          <br>
+          <br>
+          <div class="form-group">
+            <input type="text" class="form-control" formControlName="name" aria-describedby="emailHelp"
+              placeholder="Full Name">
+          </div>
+          <div class="form-group">
+            <input type="number" class="form-control" formControlName="id" aria-describedby="emailHelp"
+              placeholder="KSU ID">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" formControlName="email" aria-describedby="emailHelp"
+              placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" formControlName="password" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+          </div>
+          <button type="submit" class="btn btn-outline-primary btn-lg btn-block" [disabled]="!newSupervisorForm.valid">Create
+            Account</button>
+          </form>
+      </div>
+
+      <div *ngIf="Type == 'Orgnization'"> 
+        <form [formGroup]="newOrganizationForm" (ngSubmit)="onSubmit()">
+           
+          <br>
+          <br>
+          <div class="form-group">
+            <input type="text" class="form-control" formControlName="name" aria-describedby="emailHelp"
+              placeholder="Name Of Organization">
+          </div>
+          
+          <div class="form-group">
+            <input type="email" class="form-control" formControlName="email" aria-describedby="emailHelp"
+              placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" formControlName="information" aria-describedby="emailHelp"
+              placeholder="Write Information About The Organization">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" formControlName="password" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+          </div>
+          <button type="submit" class="btn btn-outline-primary btn-lg btn-block" [disabled]="!newOrganizationForm.valid">Create
+            Account</button>
+          </form>
+      </div>
+
+      <!-- <div *ngIf="Type == 'Training Committee'"> 
+        <form [formGroup]="newTrainingCommitteeForm" (ngSubmit)="onSubmit()">
+           
+          <br>
+          <br>
+          <div class="form-group">
+            <input type="text" class="form-control" formControlName="name" aria-describedby="emailHelp"
+              placeholder="Full Name">
+          </div>
+          <div class="form-group">
+            <input type="number" class="form-control" formControlName="id" aria-describedby="emailHelp"
+              placeholder="KSU ID">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" formControlName="email" aria-describedby="emailHelp"
+              placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" formControlName="password" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+          </div>
+          <button type="submit" class="btn btn-outline-primary btn-lg btn-block" [disabled]="!newTrainingCommitteeForm.valid">Create
+            Account</button>
+          </form>
+         
+
+      
+  </div> -->
+  </div>
+

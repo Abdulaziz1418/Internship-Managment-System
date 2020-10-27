@@ -1,0 +1,43 @@
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <div class="d-flex justify-content-start">
+    <a class="navbar-brand" href="" routerLink="/Home/WPage&login">Home</a>
+    </div>
+  
+    
+    
+           
+    <form class="form-inline my-2 my-lg-0" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <select (change)="onChange($event)" class="custom-select">
+            <option selected>Who you are?</option>
+            <option value="Student" >Student</option>
+            <option value="Training Committee">Training Committee</option>
+            <option value="Supervisor">Supervisor</option>
+            <option value="Orgnization">Orgnization</option>
+          </select>
+          
+        <input class="form-control mr-sm-3" type="text" placeholder="ID" formControlName="id">
+       <input class="form-control mr-sm-2" type="password" placeholder="Password"formControlName="password">
+
+
+
+
+
+<ul class="navbar-nav px-3">
+  <li class="nav-item text-nowrap">
+    <button type="submit" class="btn btn-outline-light" [disabled]="!loginForm.valid">Login</button>
+</li>
+  
+</ul>
+
+</form>
+    
+<ul class="navbar-nav px-3">
+  <li class="nav-item text-nowrap">
+    <a class="btn btn-outline-light" routerLink="/Home/LoginAsGuest">Login as guest</a>
+</li>
+  
+</ul>
+    
+  </nav>
+
+  <router-outlet></router-outlet>

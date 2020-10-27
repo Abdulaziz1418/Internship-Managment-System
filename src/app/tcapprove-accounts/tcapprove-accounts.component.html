@@ -1,0 +1,81 @@
+<br>
+  <br>
+  <br>
+
+  <div class="container-fluid" (ngSubmit)="showStudentsResponse()">
+    <div class="row">
+      
+  <div *ngFor= 'let i of student' [attr.id]="i.id">
+  <div class="col-sm-3">
+      <div class="card" style="width: 18rem; ">
+        <div class="card-body" style="text-align: left;">
+          <h5 class="card-title" style="text-align: center; color: red;">Student</h5>
+
+      <h5 class="card-title" >Name: {{i.name}}</h5>
+      <p class="card-text" >ID: {{i.id}}</p>
+      <p class="card-text">GPA: {{i.gpa}}</p>
+      <p class="card-text">EMAIL: {{i.email}}</p>
+      <p class="card-text">{{i.cv}}</p>
+
+      <button type="submit"  class="btn btn-primary btn-lg btn-block" (click)="deleteStudent(i.id)" >Delete</button>
+      <a  class="btn btn-primary btn-lg btn-block" (click)="approve(i.id)">Approve</a>
+   
+      
+      </div>
+      </div>
+      </div>
+      <br>
+    
+      </div>
+      </div>
+      </div>
+      <div class="container-fluid" (ngSubmit)="showSupResponse()">
+        <div class="row">
+          
+      <div *ngFor= 'let i of supervisor' [attr.id]="i.id">
+      <div class="col-sm-3">
+          <div class="card" style="width: 18rem; ">
+            <div class="card-body" style="text-align: left;">
+              <h5 class="card-title" style="text-align: center; color: red;">Supervisor</h5>
+    
+          <h5 class="card-title" >Name: {{i.name}}</h5>
+          <p class="card-text" >ID: {{i.id}}</p>
+          <p class="card-text">EMAIL: {{i.email}}</p>
+    
+          <button type="submit" class="btn btn-primary btn-lg btn-block" (click)="deleteSupervisor(i.id)">Delete</button>
+          <a  class="btn btn-primary btn-lg btn-block" (click)="approveSup(i.id)">Approve</a>
+       
+          
+          </div>
+          </div>
+          </div>
+          <br>
+        
+          </div>
+          </div>
+          </div>
+      <div class="container-fluid" (ngSubmit)="showOrgsResponse()">
+        <div class="row">
+          
+      <div *ngFor= 'let i of organization' [attr.id]="i.id">
+      <div class="col-sm-3">
+          <div class="card" style="width: 18rem; ">
+            <div class="card-body" style="text-align: left;">
+              <h5 class="card-title" style="text-align: center; color: red;">Organization</h5>
+
+          <h5 class="card-title" >Name: {{i.name}}</h5>
+          <p class="card-text">EMAIL: {{i.email}}</p>
+          <p class="card-text">Info: {{i.information}}</p>
+    
+          <button type="submit" class="btn btn-primary btn-lg btn-block" (click)="deleteOrgs(i.id)">Delete</button>
+          <a  class="btn btn-primary btn-lg btn-block" (click)="approveOrgs(i.id)">Approve</a>
+       
+          
+          </div>
+          </div>
+          </div>
+          <br>
+        
+          </div>
+          </div>
+          </div>

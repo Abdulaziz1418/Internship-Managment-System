@@ -1,0 +1,21 @@
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <div class="d-flex justify-content-start">
+    <a class="navbar-brand" href="" routerLink="/TrainingCommittee/{{currentId}}/Account" >My Account</a>
+    <a class="navbar-brand" href="" routerLink="/TrainingCommittee/{{currentId}}/ApproveAccounts" >Approve Accounts</a>
+    <a class="navbar-brand" href="" routerLink="/TrainingCommittee/{{currentId}}/listOfStudents" >List Of Students</a>
+    <a class="navbar-brand" href="" routerLink="/TrainingCommittee/{{currentId}}/StudentsDocuments" >Students Documents</a>
+    <a class="navbar-brand" href="" routerLink="/TrainingCommittee/{{currentId}}/Supervisors" >Supervisors</a>
+    <a class="navbar-brand" href="" routerLink="/TrainingCommittee/{{currentId}}/StudentsStatus" >Students Status</a>
+
+    </div>
+
+    <ul class="navbar-nav px-3">
+      <li class="nav-item text-nowrap">
+        <button type="button" class="btn btn-outline-light" routerLink="/Home/WPage&login">Logout</button>
+      </li>
+      
+    </ul>
+    
+  </nav>
+
+  <router-outlet></router-outlet>

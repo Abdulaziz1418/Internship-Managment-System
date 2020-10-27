@@ -1,0 +1,95 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
+
+<style>
+
+#signIn {
+    background-color: red;
+    width: 35%; 
+  text-align: center;
+  border: 0cm;
+  margin: 0cm  11cm;
+
+
+}
+
+
+</style>
+  <div class="card-panel #eeeeee grey lighten-3" id="signIn">
+       
+  
+    <!-- <form id="checkbox">
+        <p>
+
+          <label>
+            <input type="checkbox" />
+            <span>Candidate</span>
+          </label>
+        </p>
+        <p>
+            <label>
+              <input type="checkbox" />
+              <span>Employer</span>
+            </label>
+          </p>
+          </form> -->
+          <nav>
+            <div class="nav-wrapper #424242 grey darken-3">
+              <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li ><a href=""  routerLink="/card2">Student</a></li></ul>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="" routerLink="/empAccount">Employee</a></li>
+        
+              </ul>
+            </div>
+          </nav>
+        
+          <br>
+          <h6>Creat an Account</h6>
+
+    <br>
+    <input  type="number" placeholder="EMP ID" id="KSU_ID" >
+    
+    <br>
+    <input type="text" placeholder="Full Name" id="Full_Name">
+    <br>
+    <input type="email" placeholder="Email" id="Email">
+    <br>
+    <input type="password" placeholder="Password" id="password">
+<br><br>
+      
+    <button class="#424242 grey darken-3 btn" id="create_account" type="submit" >Create Account</button>
+
+    <br>
+   
+    <br>
+    <p>Already Have an Account? </p> <a  routerLink="/employees"target="_self">Sign In</a>
+  
+  </div>
+
+
+    <!-- <button class="#2196f3 blue btn" id="create_account" type="submit" (click)= "showConfigResponse()">post data</button> -->
+<br>
+
+<!-- 
+
+    <form [formGroup]="studentInfo" (ngSubmit)="callingFunction()">
+        <h3>Student Details
+    </h3>
+    
+      <label>
+        Full Name:
+        <input type="text" formControlName="fullName" >
+      </label> <br>
+    <label>
+        KSU ID:
+        <input type="text" formControlName="ID">
+      </label> <br>
+     
+</form>
+<button type="submit" [disabled]="!studentInfo.valid" (click)='callingFunction()' >Submit Application</button>
+<p>
+  Real-time data: {{ studentInfo.value | json}}
+</p>
+<p>
+  Your form status is : {{ studentInfo.status }}
+</p> -->

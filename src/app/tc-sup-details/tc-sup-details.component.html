@@ -1,0 +1,48 @@
+<br>
+<br>
+<br>
+<div class="container-fluid">
+
+    <div class="row">
+
+
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem; ">
+                <div class="card-body" style="text-align: center; ">
+
+
+                    <h5 class="card-title">{{supervisor.name}}</h5>
+                    <h6 class="card-text">{{supervisor.email}}</h6>
+                    <h6 class="card-text">{{supervisor.id}}</h6>
+
+                    <h6 class="card-text" style="text-align: left; color: #008DC3;">His Students: </h6>
+                    <div *ngFor='let  i of StudentWithSupervisor'>
+                        <div style="border-style: solid; color: #008DC3;">
+                            <p class="card-text" style="text-align: left; color: black;"> Name: {{i.name}} </p>
+                            <p class="card-text" style="text-align: left; color: black;"> ID: {{i.id}}</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="width: 18rem; ">
+                <div *ngFor='let  i of students' [attr.id]="i.id">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" ng-model="i.id" (change)="ckecked(i.id,$event)"
+                            [disabled]="isChecked && (isCheckedName!=i.id)" [name]="i.id">
+                        <label class="form-check-label" for="defaultCheck1">
+                            {{i.name}} {{i.id}}
+                        </label>
+                    </div>
+
+                </div>
+                <br>
+                <button type="submit" class="btn btn-outline-primary btn-lg btn-block" (click)="submit()"
+                    [disabled]="!theCheckbox">Assign</button>
+
+            </div>
+
+
+        </div>
+    </div>

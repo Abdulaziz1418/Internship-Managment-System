@@ -1,0 +1,19 @@
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <div class="d-flex justify-content-start">
+    <a class="navbar-brand" href="" routerLink="/organization/{{currentId}}/OrgAccount" >My Account</a>
+    <a class="navbar-brand" href="" routerLink="/organization/{{currentId}}/PostVacancies" >Post vacancy</a>
+    <a class="navbar-brand" href="" routerLink="/organization/{{currentId}}/ListOfStudents" >List Of Students</a>
+    <a class="navbar-brand" href="" routerLink="/organization/{{currentId}}/StudentsSubmission" >Applied Students</a>
+
+    </div>
+
+    <ul class="navbar-nav px-3">
+      <li class="nav-item text-nowrap">
+        <button type="button" class="btn btn-outline-light" routerLink="/Home/WPage&login">Logout</button>
+      </li>
+      
+    </ul>
+    
+  </nav>
+
+  <router-outlet></router-outlet>

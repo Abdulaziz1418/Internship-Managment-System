@@ -1,0 +1,36 @@
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="#" routerLink="/card2" >
+                <span data-feather="home"></span>
+                Profile <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file"></span>
+                Posted Vacancies
+              </a>
+            </li>
+          
+           
+            
+          </ul>
+        </div>
+      </nav>
+      <div class="card" style="width: 40rem; margin-left: 13cm; margin-top: 2cm;">
+        <div class="card-body">
+            <!-- <img src="/assets/img/Elm.jpg" class="card-img-top" alt="..." style="height: 4cm; width: 3cm;"> -->
+
+            <h5 class="card-title">{{organization.name}}</h5>
+          <p class="card-text">{{organization.email}}</p>
+          <p class="card-text">{{organization.information}}</p>
+
+          <a href="#" class="btn btn-primary">Edit</a>
+        </div>
+        

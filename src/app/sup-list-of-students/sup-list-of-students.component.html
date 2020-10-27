@@ -1,0 +1,28 @@
+<br>
+  <br>
+  <br>
+
+  <div class="container-fluid" (ngSubmit)="showStudentsResponse()">
+    <div class="row">
+      
+  <div *ngFor= 'let i of StudentReport'>
+  <div class="col-sm-3">
+      <div class="card" style="width: 18rem; ">
+        <div class="card-body" style="text-align: left;">
+  
+      <h5 class="card-title" >Name: {{i.name}}</h5>
+      <p class="card-text" #id>ID: {{i.student_id}}</p>
+      <p class="card-text">EMAIL: {{i.email}}</p>
+      <p class="card-text" >Report Name: {{i.rname}}</p>
+
+      <button type="submit" class="btn btn-primary btn-lg btn-block" (click)="showPdf(i.id)">Download Reports</button>
+   
+      
+      </div>
+      </div>
+      </div>
+      <br>
+    
+      </div>
+      </div>
+      </div>

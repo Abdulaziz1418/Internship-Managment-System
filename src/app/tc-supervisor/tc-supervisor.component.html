@@ -1,0 +1,69 @@
+<br>
+<br>
+<br>
+<div class="container-fluid">
+
+    <div class="row">
+        <div *ngFor='let  i of supervisors'  [attr.id]="i.id">
+
+
+            <div class="col-sm-3">
+                <div class="card" style="width: 18rem; ">
+                    <div class="card-body" style="text-align: center;">
+
+
+                        <h5 class="card-title">{{i.name}}</h5>
+                        <h6 class="card-text">{{i.email}}</h6>
+                        <a  class="btn btn-primary btn-lg btn-block"(click)='details(i.id)' >Details</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+  <br>
+  <br>
+  <br>
+
+  <div class="container-fluid" (ngSubmit)="showStudentsResponse()">
+    <div class="row">
+      
+  <div *ngFor= 'let i of student'  [attr.id]="i.id">
+  <div class="col-sm-3">
+      <div class="card" style="width: 18rem; ">
+        <div class="card-body" style="text-align: left;">
+  
+      <h5 class="card-title" >Name: {{i.name}}</h5>
+      <p class="card-text" #id>ID: {{i.id}}</p>
+      <p class="card-text">GPA: {{i.gpa}}</p>
+      <p class="card-text">EMAIL: {{i.email}}</p>
+      <p class="card-text">{{i.cv}}</p>
+
+      <a href="" class="btn btn-primary btn-lg btn-block" (click)="deleteStudent(i.id)" routerLink="/TrainingCommittee/listOfStudents">Delete</a>
+   
+      
+      </div>
+      </div>
+      </div>
+      <br>
+    
+      </div>
+      </div>
+      </div> -->

@@ -1,0 +1,53 @@
+<br>
+<br>
+<br>
+<div class="card">
+  <h5 class="card-header">Upload Documents To Your Supervisor</h5>
+  <div class="card-body">
+    <form [formGroup]="newReportForm" (ngSubmit)="onSubmit()">
+
+      <h5 class="card-title">PDF File Name <input type="text" formControlName="name"></h5>
+      <p class="card-text"><input type="file" (change)="fileChangeEvent($event)" formControlName="report"></p>
+      <button type="button" class="btn btn-primary" (click)="upload()"> <i
+          class="glyphicon glyphicon-open-file"></i>&nbsp;Upload</button>
+
+      <button type="submit" class="btn btn-primary" [disabled]="!newReportForm.valid" style="margin: 5px;">Send</button>
+    </form>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<div class="card">
+  <h5 class="card-header">HERE! Any Documents You Need</h5>
+  <div class="card-body">
+    <h5 class="card-title">Training plan : <button type="submit" class="btn btn-primary" (click)="showPdf()">Download</button></h5>
+
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<div class="card">
+  <h5 class="card-header">Do You Need A Special Documents?</h5>
+  <div class="card-body">
+    <h5 class="card-title">Write what you need and then wait for it to show it to you in (HERE! Any Documents You
+      Need)</h5>
+      <form [formGroup]="newDocumentForm" (ngSubmit)="onDocumentSubmit()">
+
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="message"></textarea>
+    <br>
+    <button type="submit" class="btn btn-primary">Send</button>
+    <br>
+    <h5 class="card-title">Also You Can Upload Documents Here To Training Committee</h5>
+
+      <p class="card-text"><input type="file" (change)="fileChangeEvent($event)" formControlName="document"></p>
+      <button type="button" class="btn btn-primary" (click)="DocUpload()" > <i
+          class="glyphicon glyphicon-open-file"></i>&nbsp;Upload</button>
+          <button type="submit" class="btn btn-primary" [disabled]="!newDocumentForm.valid" style="margin: 5px;">Send</button>
+
+    </form>
+  </div>
+</div>

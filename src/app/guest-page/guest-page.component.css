@@ -1,0 +1,49 @@
+#background{
+    background-color: rgba(0, 0, 0, 0.7);
+
+    width: 100%;
+    height: 100%;
+	position: absolute;
+
+}
+
+label {
+    color: #fff;
+}
+
+form {
+    width: 30%;
+    padding-left: 1cm;
+}
+input {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.container{
+    padding-left: 10cm;
+    
+}
+th{
+    color: white;
+}
+div{
+
+padding-left: 3cm;
+    width: 80%;
+    height: 100%;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+    
+        margin-top: 20px;
+        margin-bottom: 30px;
+        -moz-border-radius: 12px;
+        -webkit-border-radius: 12px;
+        border-radius: 12px;
+        -moz-box-shadow: 4px 4px 14px #000;
+        -webkit-box-shadow: 4px 4px 14px #000;
+        box-shadow: 4px 4px 14px #000;
+        
+        
+
+}
